@@ -67,7 +67,7 @@ public class TestHystrixController {
 
 
         String s = hystrixService.paymentInfo_timeOut();
-        System.out.println("sb bu");
+        System.out.println("sb bud=====(￣▽￣*)b");
         return s;
     }
 
