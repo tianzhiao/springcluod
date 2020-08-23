@@ -2,6 +2,7 @@ package com.mr;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
@@ -15,6 +16,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 //@EnableCaching // 开启缓存
 @EnableFeignClients
+@EnableHystrix
 //@EnableConfigurationProperties({PeymentFeign.class}) 加载指定的配置类
 public class OrderHystrixMain80 {
 
