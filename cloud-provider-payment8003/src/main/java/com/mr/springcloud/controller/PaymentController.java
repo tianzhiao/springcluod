@@ -28,6 +28,10 @@ public class PaymentController {
     @Value("${server.port}")
     private String serverPort;
 
+    @GetMapping("/payment/lb")
+    public String lb(){
+        return this.serverPort;
+    }
 
     @GetMapping("/payment/get/{id}")
     public CommonResult getPaymentById(@PathVariable("id") Long id){

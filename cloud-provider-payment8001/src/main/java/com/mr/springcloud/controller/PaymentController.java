@@ -40,6 +40,11 @@ public class PaymentController {
      * @return
      */
 
+    @GetMapping("/payment/lb")
+    public String lb(){
+        return this.serverPort;
+    }
+
     @GetMapping(value = "/payment/feign/timeout")
     public String paymentFeignTimeout(){
         try { TimeUnit.SECONDS.sleep(3); }catch (Exception e) {e.printStackTrace();}
@@ -107,4 +112,12 @@ public class PaymentController {
         }
         return this.discoveryClient;
     }
+
+
+    @GetMapping("/payment/zipkin")
+    public String paymentZipkin()
+    {
+        return "hi ,i'am paymentzipkin server fall back，welcome to atguigu，O(∩_∩)O哈哈~";
+    }
+
 }
